@@ -52,7 +52,7 @@ export const useCommentsStore = defineStore({
                 const userStore = useUserStore()
 				const response = await fetch(`http://daw.deei.fct.ualg.pt/~a12345/LAB8_10/api/comments.php?micropost_id=${newComment.post_id}&session_id=${userStore.user.session_id}`, {
 					method: 'POST',
-					body: JSON.stringify(newComment.post),
+					body: JSON.stringify(newComment),
 					headers: { 'Content-type': 'application/json; charset=UTF-8' },
 				})
 				const data = await response.json()

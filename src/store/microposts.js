@@ -62,7 +62,7 @@ export const useMicropostsStore = defineStore({
                 const userStore = useUserStore()
 				const response = await fetch(`http://daw.deei.fct.ualg.pt/~a12345/LAB8_10/api/microposts.php?session_id=${userStore.user.session_id}`, {
 					method: 'POST',
-					body: JSON.stringify(newMicropost.post),
+					body: JSON.stringify(newMicropost),
 					headers: { 'Content-type': 'application/json; charset=UTF-8' },
 				})
 				const data = await response.json()
@@ -80,7 +80,7 @@ export const useMicropostsStore = defineStore({
                 const userStore = useUserStore()                
 				const response = await fetch(`http://daw.deei.fct.ualg.pt/~a12345/LAB8_10/api/microposts.php?micropost_id=${micropost.post_id}&session_id=${userStore.user.session_id}`, {
 					method: 'PUT',
-					body: JSON.stringify(micropost.post),
+					body: JSON.stringify(micropost),
                     headers: { 'Content-type': 'application/json; charset=UTF-8' },
 				})
 				const data = await response.json()
