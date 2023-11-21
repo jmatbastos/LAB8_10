@@ -69,7 +69,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			// criar query numa string
 			$present_date = date("Y-m-d H:i:s");
 			$query  = "INSERT INTO microposts (user_id, content,created_at, updated_at)
-			VALUES('" . $_SESSION['user_id'] . "','" . mysqli_real_escape_string($db,$data['content']) . "','" . $present_date . "','". $present_date . "')";
+			VALUES('" . $_SESSION['user_id'] . "','" . mysqli_real_escape_string($db,$data['content']) . "',NOW(),NOW() )";
 		
 			// executar a query
 			if(!($result = @ mysqli_query($db, $query)))

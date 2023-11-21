@@ -67,9 +67,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 		if($db) {
 			// criar query numa string
-			$present_date = date("Y-m-d H:i:s");
+			// $present_date = date("Y-m-d H:i:s"); //wrong winter time !!
 			$query  = "INSERT INTO comments (user_id, content,created_at, micropost_id)
-			VALUES('" . $_SESSION['user_id'] . "','" . mysqli_real_escape_string($db,$data['content']) . "','" . $present_date . "','". $_GET['micropost_id'] . "')";
+			VALUES('" . $_SESSION['user_id'] . "','" . mysqli_real_escape_string($db,$data['content']) . "',NOW(),NOW() )";
 		
 			// executar a query
 			if(!($result = @ mysqli_query($db, $query)))
