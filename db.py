@@ -43,13 +43,9 @@ def validate_email(email):
     pass
 
 def validate_token(token):
-    db = get_db().cursor()
-    query = "SELECT * FROM users WHERE reset_digest = '" + token + "'"
-    db.execute(query)
-    user = db.fetchone()																																						
-    return user
+    pass
 	
-def update_password_digest(email):
+def update_reset_digest(email):
     db = get_db()
     present_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     reset_digest = hashlib.md5(str(datetime.now()).encode()).hexdigest()
@@ -60,14 +56,7 @@ def update_password_digest(email):
     return reset_digest
 
 def update_password(user_id, password):
-    db = get_db()
-    present_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    password_digest = hashlib.md5(password.encode()).hexdigest()
-
-    query  = "UPDATE users SET password_digest = '" + password_digest + "' , updated_at = '" + present_date + "' WHERE id = '" + user_id  + "'"
-    db.cursor().execute(query) 
-    db.commit()
-    return
+    pass
 
 def generate_cookie(email):
     db = get_db()
@@ -80,17 +69,7 @@ def generate_cookie(email):
     return remember_digest
 
 def validate_cookie(cookie):
-    db = get_db().cursor()
-    query = "SELECT * FROM users WHERE remember_digest = '" + cookie + "'"
-    db.execute(query)
-    user = db.fetchone()																																						
-    return user
+    pass
 
 def cookie_reset(id):
-    db = get_db()
-    present_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-    query  = "UPDATE users SET remember_digest = '' , updated_at = '" + present_date + "' WHERE id = '" + str(id)  + "'"
-    db.cursor().execute(query) 
-    db.commit()
-    return 
+    pass

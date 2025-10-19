@@ -23,10 +23,8 @@ def index():
 def delete(id):
     pass
 
+@bp.route('/new', methods=('GET', 'POST'))
 @bp.route('/update/<int:id>', methods=('GET', 'POST'))
-def update(id):
+def new_or_update(id=None):
     pass
 
-@bp.route('/new', methods=('GET', 'POST'))
-def new(id):
-    pass
