@@ -6,10 +6,14 @@
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    img {display: block; margin: auto; width: 50%;}
 </style>
 
 <div class="example-wrapper">
-    <h1>Welcome to {{ lab_name }}! ✅</h1>
+
+    <img src="{{url_for('static', filename='images/flask.svg')}}"  alt="logo" >
+
+    <h1>Welcome to your Flask {{ lab_name }}! ✅</h1>
 
     This friendly message is coming from:
     <ul>
