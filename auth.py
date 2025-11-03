@@ -7,7 +7,7 @@ from flask_mail import Mail
 from flask_mail import Message
 app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'localhost'
-app.config['MAIL_PORT'] = 1025
+app.config['MAIL_PORT'] = 25
 mail = Mail(app)
 
 
