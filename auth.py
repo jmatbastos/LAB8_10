@@ -42,3 +42,6 @@ def send_email(email, reset_digest):
     )
     msg.html = render_template('auth/reset_email.html',reset_digest=reset_digest)
     mail.send(msg)
+    ## problemas em receber o email na aplicação Papercut-SMTP ?
+    ## comente todas as linhas anteriores e descomente a linha seguinte ...
+    # return render_template('auth/reset_email.html',reset_digest=reset_digest)
