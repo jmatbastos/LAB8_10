@@ -11,7 +11,7 @@ app.config['MAIL_PORT'] = 25
 mail = Mail(app)
 
 
-from Flask_exame2.db import (register_user,login_user, validate_email, update_password_digest, 
+from LAB8_10.db import (register_user,login_user, validate_email, update_password_digest, 
                              validate_token, update_password,generate_cookie,cookie_reset
 )
 bp = Blueprint('auth', __name__, url_prefix='/auth')

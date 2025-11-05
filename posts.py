@@ -4,7 +4,7 @@ from flask import (
     Blueprint, session, flash, redirect, render_template, request, url_for
 )
 
-from Flask_exame2.db import get_posts, new_post, get_post, update_post, delete_post, validate_cookie
+from LAB8_10.db import get_posts, new_post, get_post, update_post, delete_post, validate_cookie
 
 
 

@@ -58,6 +58,9 @@ def update_reset_digest(email):
 def update_password(user_id, password):
     pass
 
+def update_password_digest(email):
+    pass
+
 def generate_cookie(email):
     db = get_db()
     present_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
