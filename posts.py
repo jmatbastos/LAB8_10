@@ -1,4 +1,3 @@
-import os
 from flask import Flask
 from flask import (
     Blueprint, session, flash, redirect, render_template, request, url_for

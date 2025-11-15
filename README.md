@@ -40,5 +40,5 @@ from LAB8_10 import app as application
 
 ### Open project in browser at URL
 ```
-http://josebastos.eu/~a12345/wsgi/LAB8_10
+http://josebastos.eu/~a12345/wsgi/LAB8_10/app.wsgi
 ```
