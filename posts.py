@@ -5,9 +5,6 @@ from flask import (
 
 from LAB8_10.db import get_posts, new_post, get_post, update_post, delete_post, validate_cookie
 
-
-
-
 bp = Blueprint('posts', __name__)
 
 
@@ -23,7 +20,10 @@ def delete(id):
     pass
 
 @bp.route('/new', methods=('GET', 'POST'))
+def new_post():
+    pass
+
 @bp.route('/update/<int:id>', methods=('GET', 'POST'))
-def new_or_update(id=None):
+def update_post(id):
     pass
 
