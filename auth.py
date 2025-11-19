@@ -11,7 +11,7 @@ app.config['MAIL_PORT'] = 25
 mail = Mail(app)
 
 
-from LAB8_10.db import (register_user,login_user, validate_email, update_reset_digest, 
+from LAB8_10.db import (register_user,login_user, validate_email, generate_reset_digest, 
                              validate_token, update_password,generate_cookie,cookie_reset
 )
 bp = Blueprint('auth', __name__, url_prefix='/auth')

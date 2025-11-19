@@ -45,7 +45,7 @@ def validate_email(email):
 def validate_token(token):
     pass
 	
-def update_reset_digest(email):
+def generate_reset_digest(email):
     db = get_db()
     present_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     reset_digest = hashlib.md5(str(datetime.now()).encode()).hexdigest()
