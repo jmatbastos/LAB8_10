@@ -11,8 +11,6 @@ app.config.from_mapping(
 )
 
 
-from . import db
- 
 from . import auth
 app.register_blueprint(auth.bp)
 
